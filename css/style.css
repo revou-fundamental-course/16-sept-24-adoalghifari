@@ -1,1 +1,308 @@
-/* ini css */
+/* Reset dan Base styles */
+* {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.6;
+}
+
+/* Gaya untuk header */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2a4d69;
+    color: white;
+    padding: 16px 24px;
+}
+
+/* Gaya untuk navigasi menu */
+.main-header .menu a {
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    border-radius: 70%;
+    -webkit-border-radius: 70%;
+    -moz-border-radius: 70%;
+    -ms-border-radius: 70%;
+    -o-border-radius: 70%;
+}
+
+/* Hover efek untuk navigasi */
+.main-header .menu a:hover {
+    background-color: #305f72;
+    border-radius: 70%;
+    -webkit-border-radius: 70%;
+    -moz-border-radius: 70%;
+    -ms-border-radius: 70%;
+    -o-border-radius: 70%;
+}
+
+/* Gaya untuk logo */
+.logo {
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+/* Bagian hero */
+.hero {
+    padding: 24px;
+    text-align: center;
+    background-color: #cfe3dc;
+}
+
+/* Ukuran heading dalam hero */
+.hero h1 {
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+.hero p {
+    margin-bottom: 20px;
+}
+
+/* Gaya umum untuk button */
+button {
+    padding: 10px 20px;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover efek untuk button */
+button:hover {
+    background-color: #4cae4c;
+}
+
+/* Gaya untuk slideshow container */
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+/* Gambar dalam slideshow */
+.img-slideshow {
+    width: 100%;
+    height: 400px;
+    display: none;
+}
+
+/* Tampilkan gambar pertama */
+.img-slideshow:first-of-type {
+    display: block;
+}
+
+/* Gaya untuk tombol Previous dan Next */
+.slideshow-btn {
+    position: absolute;
+    top: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    font-size: 18px;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+
+/* Hover efek untuk tombol slideshow */
+.slideshow-btn:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Tombol Previous di kiri */
+.slideshow-btn:first-of-type {
+    left: 10px;
+}
+
+/* Tombol Next di kanan */
+.slideshow-btn:last-of-type {
+    right: 10px;
+}
+
+/* Gaya untuk bagian lokasi */
+.locations {
+    padding: 20px;
+    background-image: url('../assets/jogja2.jpg');
+    background-position: center;
+    background-size: cover;
+    background: transparent;
+    text-align: center;
+}
+
+.locations h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Style untuk daftar kota */
+.city-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Style untuk setiap kota */
+.city {
+    width: 30%;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.city:hover {
+    transform: scale(1.05);
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Ikon kota */
+.city-icon-1, .city-icon-2, .city-icon-3 {
+    width: 100%;
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 10px;
+}
+
+.city-icon-1 {
+    background-image: url('../assets/jakarta.jpg');
+}
+.city-icon-2 {
+    background-image: url('../assets/kebumen1.jpg');
+}
+.city-icon-3 {
+    background-image: url('../assets/ntb.jpg');
+}
+
+.city p {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #2c3e50;
+}
+
+/* Style untuk deskripsi kota */
+.city .description {
+    font-size: 16px;
+    color: #7f8c8d;
+}
+
+/* Container untuk form dan output */
+.container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 900px;
+    margin: 0 auto;
+    gap: 15px;
+    background-color: #f2f5f4;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+form {
+    width: 45%;
+}
+
+form input[type="text"], form input[type="date"], form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Gaya tombol submit */
+form input[type="submit"] {
+    width: 100%;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: #4cae4c;
+}
+
+/* Container untuk output form */
+.output-container {
+    width: 45%;
+    padding: 20px;
+    background-color: rgb(241, 240, 240);
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Gaya footer */
+footer {
+    background-color: #1a3b5d;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsif untuk layar mobile */
+@media only screen and (max-width: 600px) {
+    /* Header menjadi kolom */
+    .main-header {
+        flex-direction: column;
+    }
+
+    /* Menu menjadi vertikal dengan flex */
+    .menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Align items di tengah untuk estetika */
+    }
+
+    .logo {
+        margin-bottom: 14px;
+    }
+
+    /* Layout container berubah vertikal */
+    .container {
+        flex-direction: column;
+    }
+
+    .city-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .city {
+        width: 80%;
+    }
+
+    /* Form dan output jadi full width */
+    form, .output-container {
+        width: 100%;
+    }
+}

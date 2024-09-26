@@ -1,12 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="css\style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Travel by Givardo</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  
+   <!-- Bagian Header -->
+   <header class="main-header">
+      <!-- Logo Travel Website -->
+      <img class="logo" alt="Logo" src="../assets/logo-icon.png" />
+      <!-- Menu Navigasi -->
+      <div class="menu">
+        <a href="index.html">Home</a>
+        <a href="#our-profile">Our Profile</a>
+        <a href="#destinations">Destinations</a>
+        <a href="#message-us">Message Us</a>
+      </div>
+    </header>
+
+    <!-- Bagian Utama (Hero Section) -->
+    <main class="hero" id="our-profile">
+       <h1>Hi <span id="name">User</span>, Welcome To Website!</h1>
+       <p>Ini adalah Website yang memberikan tempat wisata menarik di Indonesia</p>
+       <!-- Tombol untuk mengganti nama user -->
+       <button id="tombol">Ganti Nama</button>
+
+       <!-- Slideshow gambar destinasi -->
+       <div class="slideshow-container">
+            <img class="img-slideshow" src="./assets/belitung.jpg" />
+            <img class="img-slideshow" src="./assets/jakarta.jpg" />
+            <img class="img-slideshow" src="./assets/jogja2.jpg" />
+            <!-- Tombol Previous dan Next -->
+            <button class="slideshow-btn" onclick="plusDivs(-1)">&#10094; Previous</button>
+            <button class="slideshow-btn" onclick="plusDivs(1)">Next &#10095;</button>
+        </div>
+    </main>
+    
+    <!-- Bagian Lokasi Wisata -->
+   <section class="locations" id="destinations">
+    <h2>Destinations</h2>
+    <div class="city-list">
+        <!-- Representasi Kota Jakarta -->
+        <div class="city">
+            <div class="city-icon-1"></div>
+            <p>Jakarta</p>
+            <p class="description">Jakarta, ibu kota Indonesia, dikenal dengan gedung pencakar langit, pusat bisnis, dan budaya yang beragam.</p>
+        </div>
+        <!-- Representasi Kota Kebumen -->
+        <div class="city">
+            <div class="city-icon-2"></div>
+            <p>Kebumen</p>
+            <p class="description">Kebumen, kota kecil di Jawa Tengah, menawarkan pantai yang indah dan gua alami yang menarik.</p>
+        </div>
+        <!-- Representasi Kota NTB -->
+        <div class="city">
+            <div class="city-icon-3"></div>
+            <p>NTB</p>
+            <p class="description">Nusa Tenggara Barat (NTB) terkenal dengan keindahan alamnya, termasuk pantai dan gunung yang mempesona.</p>
+        </div>
+    </div>
+</section>
+
+    
+    <!-- Bagian Form Pesan -->
+    <div class="container">
+        <!-- Form untuk mengirim pesan -->
+        <form name="message-form" onsubmit="return validateForm()" id="message-us">
+            <h2>Message Us</h2>
+
+            <!-- Input untuk Nama Lengkap -->
+            <div>
+                <label for="full-name">Nama :</label>
+                <input placeholder="Nama" type="text" name="full-name" id="full-name" />
+            </div>
+
+            <!-- Input untuk Tanggal Lahir -->
+            <div>
+                <label for="birth-date">Tanggal Lahir :</label>
+                <input type="date" name="birth-date" id="birth-date" />
+            </div>
+
+            <!-- Radio Button untuk Jenis Kelamin -->
+            <div class="radio-group">
+                <label>Jenis Kelamin :</label>
+                <input type="radio" id="male" name="gender" value="male" />
+                <label for="male">Laki-Laki</label>
+                <input type="radio" id="female" name="gender" value="female" />
+                <label for="female">Perempuan</label>
+            </div>
+
+            <!-- Textarea untuk Pesan -->
+            <div>
+                <label for="messages">Pesan :</label>
+                <textarea name="messages" placeholder="Pesan" id="messages"></textarea>
+            </div>
+
+            <!-- Tombol Submit -->
+            <input type="submit" value="Submit" />
+        </form>
+
+        <!-- Bagian Output dari Form -->
+        <div class="output-container">
+            <p class="current-time">Current time : <span id="current-time"></span></p>
+            <p>Nama : <span id="sender-full-name"></span></p>
+            <p>Tanggal Lahir : <span id="sender-birth-date"></span></p>
+            <p>Jenis Kelamin : <span id="sender-gender"></span></p>
+            <p>Pesan : <span id="sender-messages"></span></p>
+        </div>
+    </div>
+
+    <!-- Bagian Footer -->
+    <footer>
+        <p>Created by Givardo &copy; 2024</p>
+    </footer>
+    
+    <script src="js/script.js"></script>
 </body>
 </html>
